@@ -1,0 +1,48 @@
+html, body {
+  /* height: 100%; */
+  background: url("../img/background.jpg") no-repeat top right fixed;
+    background-color: #0b0288;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font: caption;
+    font-size: 14px;
+  margin: 5px;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#chat {
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.col.s12 > .btn {
+   width: 100%;
+  height: 50px;
+  font-size: 16px;
+}
+
+.messages {
+  /* width: 100%; */
+  height: 180px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.typing {
+  font-style: italic;
+  text-align: left;
+  position: absolute;
+  padding-top: 5px;
+}

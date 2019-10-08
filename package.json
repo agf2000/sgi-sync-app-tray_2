@@ -1,0 +1,49 @@
+{
+	"name": "sgi-sync-app-tray",
+	"description": "Notificador - SGI",
+	"version": "0.3.5",
+	"main": "main.js",
+	"author": "Giovanni <agf_2000@hotmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"pack": "build --dir",
+		"dist": "build --win --ia32",
+		"production": "SET NODE_ENV=production & electron .",
+		"start": "SET NODE_ENV=development & electron ."
+	},
+	"dependencies": {
+		"electron-json-storage": "^3.2.0",
+		"electron-log": "^2.2.14",
+		"electron-updater": "^2.21.10",
+		"fs-extra": "^4.0.2",
+		"node-notifier": "^5.2.1",
+		"os": "^0.1.1",
+		"socket.io": "^2.1.1"
+	},
+	"devDependencies": {
+		"electron": "^1.7.9",
+		"electron-builder": "^19.37.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/agf2000/sgi-sync-app-tray_2.git"
+	},
+	"build": {
+		"appId": "com.br.softernet.sgi-sync-app-tray",
+		"publish": [
+			{
+				"provider": "generic",
+				"url": "http://sgi.winconnection.net:8081/SGI_Broadcast"
+			}
+		],
+		"productName": "SGI Notificador",
+		"copyright": "© 2018 Softek Automação Cormecial",
+		"nsis": {
+			"perMachine": false,
+			"oneClick": true,
+			"allowToChangeInstallationDirectory": false,
+			"artifactName": "SGI_Notificador_Setup_${version}.${ext}",
+			"createStartMenuShortcut": true
+		}
+	}
+}

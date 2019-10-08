@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Window</title>
+    <!-- <link rel="stylesheet" href="./../css/materialize.min.css"> -->
+    <link rel="stylesheet" href="./../lib/metro/css/metro-all.min.css">
+    <!-- <link rel="stylesheet" href="./../css/nprogress.css"> -->
+    <!-- <link rel="stylesheet" href="./../css/pnotify.custom.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata"> -->
+    <!--Import your style sheets here-->
+    <link rel="stylesheet" href="./../css/chat.css">
+</head>
+
+<body class="h-vh-100">
+
+    <div class="wrap">
+        <div class="form-group">
+            <input type="text" name="username" id="username" data-role="materialinput" data-label="Digite seu nome"
+                placeholder="Digite seu nome" data-cls-line="bg-cyan">
+        </div>
+        <div id="chatWindow" class="container">
+        </div>
+        <div id="inputWindow">
+            <input type="text" name="message" id="message" data-role="materialinput" data-label="Digite sua mensagem"
+                placeholder="Digite sua mensagem">
+            <button type="submit" id="btnSend" class="button bg-cyan fg-white w-100">Enviar</button>
+        </div>
+    </div>
+
+    <div id="typingIndicator" class="clear"></div>
+
+    <div class="footer">
+        <small class="d-flex flex-justify-between">
+            <div class="text-left">SOFTEK ©2019</div>
+            <div class="text-right" id="appVersion"></div>
+        </small>
+    </div>
+
+    <script>
+        var eRequire = require;
+        window.$ = window.jQuery = require('./../js/libs/jquery.min.js');
+    </script>
+
+    <script src="./../js/libs/socket.io.js"></script>
+    <script src="./../js/libs/hammer.min.js" onload="window.Hammer = module.exports;"></script>
+    <!-- <script src="./../js/libs/nprogress.js"></script> -->
+    <!-- <script src="./../js/libs/materialize.min.js"></script> -->
+    <!-- <script src="./../js/libs/pnotify/pnotify.custom.min.js"></script> -->
+    <script src="./../lib/metro/js/metro.min.js"></script>
+
+    <!--Import your js scripts here  -->
+    <script src="./../js/chat.js"></script>
+
+</body>
+
+</html>
